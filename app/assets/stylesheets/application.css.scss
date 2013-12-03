@@ -1,0 +1,23 @@
+/*
+ *= require_tree .//blocks/.
+ *= require font-awesome
+ *= require_self
+ */
+
+@import 'bootstrap_and_overrides';
+
+@import "twitter/bootstrap";
+
+
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar-brand {
+	i {
+		margin-right: 10px;
+		color: $brand-success;
+	}
+}
