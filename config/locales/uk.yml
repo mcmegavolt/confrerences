@@ -1,0 +1,32 @@
+uk:
+  meta:
+    site_title: "Наукові Конференції"
+  most_common:
+    move_forward: "Вперед!"
+
+
+  activerecord:
+    models:
+      conference: 'Конференції'
+      article: 'Статті'
+      admin_user: 'Адміністратори'
+    attributes:
+      conference:
+        title: 'Назва'
+        description: 'Опис'
+        file: 'Файл'
+        picture: 'Зображення'
+        start_at: 'Початок'
+        end_at: 'Кінець'
+      article:
+        title: 'Назва'
+        entry: 'Вступ'
+        file: 'Файл'
+        author: 'Автор'
+        category: 'Категорія'
+        created_at: 'Створено'
+        updated_at: 'Оновлено'
+      admin_user:
+        current_sign_in_at: 'На сайті'
+        last_sign_in_at: 'Останній вхід'
+        sign_in_count: 'Кількість входів'

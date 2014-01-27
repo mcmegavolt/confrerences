@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.1'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+
+
 gem 'sqlite3'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -18,8 +21,9 @@ gem 'meta-tags', :require => 'meta_tags'
 gem 'ancestry'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 
-gem 'russian'
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'has_scope'
+gem 'mini_magick'
+gem 'carrierwave'
 
 gem 'simple_form'
 gem "slim-rails"
@@ -30,6 +34,10 @@ gem 'font-awesome-sass'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails',
                               :branch => '3.0.0'
+
+gem 'rails-i18n', '~> 4.0.0'
+
+gem 'chosen-rails'
 
 group :development do
   gem 'thin'
