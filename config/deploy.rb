@@ -1,10 +1,10 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :deploy_to, "/home/conferences/conferences"
+set :deploy_to, "/home/conference/conference"
 set :scm, :git
 set :deploy_via, :remote_cache
-set :repo_url, 'git@github.com:mcmegavolt/conferences.git'
+set :repo_url, 'git@github.com:mcmegavolt/confrerences.git'
 set :copy_exclude, [".git"]
 set :branch, 'develop'
 set :format, :pretty
@@ -18,7 +18,6 @@ set :rvm_ruby_version, '2.0.0-p353'
 
 set :linked_dirs, %w{public/uploads}
 
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :keep_releases, 5
 
 namespace :deploy do
