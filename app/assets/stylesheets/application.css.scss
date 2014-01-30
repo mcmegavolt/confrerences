@@ -8,21 +8,93 @@
 
 @import "twitter/bootstrap";
 
-
-
-.navbar-default {
-	background-color: transparent;
-	border-color: transparent;
+body, html {
+  height: 100%;
 }
 
-.navbar-brand {
-	i {
-		margin-right: 10px;
-		color: $brand-success;
-	}
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+  p {
+    &.text-muted {
+      margin: 20px 0;
+    }
+  }
+}
+.header {
+  .navigation {
+    height: 70px;
+  }
+  .title {
+    border-left: 5px solid #eee;
+    padding-left: 20px;
+    .dates {
+      font-size: 18px;
+      margin: 0;
+    }
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+#conference {
+  #show {
+    .categories {
+      a {
+        overflow: hidden;
+        h3.title {
+          margin: 0;
+          font-size: 20px;
+        }
+        .count {
+          position: absolute;
+          top: 7px;
+          right: 14px;
+          font-size: 50px;
+          font-weight: 600;
+          color: #fff;
+          -webkit-transition: all 300ms ease-in-out;
+          -moz-transition: all 300ms ease-in-out;
+          -ms-transition: all 300ms ease-in-out;
+          -o-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+        }
+      }
+      a:hover {
+        text-decoration: none;
+        .count {
+          right: 30px;
+          top: -25px;
+          font-size: 84px;
+          -moz-transform: rotate(-20deg) translateX(10px);
+          -webkit-transform: rotate(-20deg) translateX(10px);
+          -o-transform: rotate(-20deg) translateX(10px);
+          -ms-transform: rotate(-20deg) translateX(10px);
+          transform: rotate(-20deg) translateX(10px);
+        }
+      }
+    }
+  }
 }
 
 
+
+.navbar-nav {
+  li {
+    &.active {
+      a {
+        background-color: #eee;
+      }
+    }
+  }
+}
 
 .shadow-effect {
 	position: relative;
@@ -47,4 +119,8 @@
   -o-transform: rotate(-3deg);
   -ms-transform: rotate(-3deg);
   transform: rotate(-3deg);
+}
+
+.jumbotron h1 {
+  font-size: 50px;
 }

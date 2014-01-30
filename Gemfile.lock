@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 74c1b220639862b99173f6d10a0852d23aa289ef
+  revision: bae6cec4c38ac43deff4476b128796ecfad5741b
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -75,7 +75,7 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    better_errors (1.0.1)
+    better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
@@ -84,6 +84,19 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.1.4)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.1)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2.0)
+    capistrano-rails (1.1.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.1)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -101,7 +114,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.3)
+    coffee-script-source (1.7.0)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -130,11 +143,11 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
-    i18n (0.6.5)
-    jbuilder (1.5.2)
+    i18n (0.6.9)
+    jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jquery-rails (3.0.4)
+    jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.1.1)
@@ -152,7 +165,10 @@ GEM
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     minitest (4.7.5)
-    multi_json (1.8.2)
+    multi_json (1.8.4)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.7.0)
     orm_adapter (0.5.0)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
@@ -169,38 +185,38 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.1)
       sprockets-rails (~> 2.0.0)
-    rails-i18n (4.0.0)
+    rails-i18n (4.0.1)
       i18n (~> 0.6)
-      rails (~> 4.0.0)
+      rails (~> 4.0)
     railties (4.0.1)
       actionpack (= 4.0.1)
       activesupport (= 4.0.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.0)
+    rake (10.1.1)
     ransack (1.1.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       polyamorous (~> 0.6.0)
-    rdoc (3.12.2)
+    rdoc (4.1.1)
       json (~> 1.4)
     responders (1.0.0)
       railties (>= 3.2, < 5)
-    sass (3.2.12)
+    sass (3.2.14)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
-    sdoc (0.3.20)
-      json (>= 1.1.3)
-      rdoc (~> 3.10)
+    sdoc (0.4.0)
+      json (~> 1.8)
+      rdoc (~> 4.0, < 5.0)
     simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
-    slim-rails (2.0.3)
+    slim-rails (2.1.0)
       actionpack (>= 3.0, < 4.1)
       activesupport (>= 3.0, < 4.1)
       railties (>= 3.0, < 4.1)
@@ -215,8 +231,14 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.8)
+    sshkit (1.3.0)
+      net-scp (>= 1.1.2)
+      net-ssh
+      term-ansicolor
     subexec (0.2.3)
     temple (0.6.7)
+    term-ansicolor (1.2.2)
+      tins (~> 0.8)
     thin (1.6.1)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -225,13 +247,14 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
+    tins (0.13.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (1.3.1)
+    turbolinks (2.2.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.3.2)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
@@ -246,6 +269,10 @@ DEPENDENCIES
   anjlab-bootstrap-rails!
   better_errors
   binding_of_caller
+  capistrano (~> 3.1.0)
+  capistrano-bundler
+  capistrano-rails
+  capistrano-rvm
   carrierwave
   chosen-rails
   coffee-rails (~> 4.0.0)

@@ -1,29 +1,13 @@
-.container
-  .header
-    nav.navbar.navbar-default
-      .navbar-header
-        .navbar-brand.text-muted
-          i.fa.fa-flask
-          = t(:'meta.site_title')
-      ul.nav.navbar-nav.pull-right
-        li class=('active' if I18n.locale == :uk)
-          = link_to 'Українська', :locale => :uk
-        li class=('active' if I18n.locale == :ru)
-          = link_to 'Русский', :locale => :ru
-        li class=('active' if I18n.locale == :en)
-          = link_to 'English', :locale => :en
-  .jumbotron.shadow-effect
-    - @last_conference = Conference.last
-    h1 = @last_conference.title
+.jumbotron.shadow-effect
+  h1= last_conference.title
 
-    p.lead = show_conference_dates @last_conference
-    p  = link_to t(:'most_common.move_forward'), conference_path(@last_conference), class: "btn btn-lg btn-success"
-  .row
-    .col-lg-6
-      - Conference.all.each do |conference|
-        h3 = conference.title
-        p = show_conference_dates conference
-        p = conference.description
-      
-  .footer
-    p &copy; Company 2013
+  p.lead = show_conference_dates last_conference
+  p  = link_to t(:'most_common.move_forward'), conference_path(last_conference), class: "btn btn-lg btn-success"
+.row
+  .col-lg-6
+    - Conference.all.each do |conference|
+      h3 = conference.title
+      p = show_conference_dates conference
+      p = conference.description
+    
+

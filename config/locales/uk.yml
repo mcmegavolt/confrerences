@@ -1,14 +1,16 @@
 uk:
   meta:
-    site_title: "Наукові Конференції"
+    site_title: 'Наукові Конференції'
   most_common:
-    move_forward: "Вперед!"
-
+    move_forward: 'Вперед!'
+    click_to_select: 'Натисніть для вибору'
+    donwload_conf_book: "Завантажити збірник"
 
   activerecord:
     models:
       conference: 'Конференції'
       article: 'Статті'
+      category: 'Категорії'
       admin_user: 'Адміністратори'
     attributes:
       conference:
@@ -24,8 +26,13 @@ uk:
         file: 'Файл'
         author: 'Автор'
         category: 'Категорія'
+        conference: 'Конференція'
         created_at: 'Створено'
         updated_at: 'Оновлено'
+      category:
+        title: 'Назва'
+        icon: 'Значок'
+        picture: 'Зображення'
       admin_user:
         current_sign_in_at: 'На сайті'
         last_sign_in_at: 'Останній вхід'

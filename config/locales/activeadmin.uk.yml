@@ -1,0 +1,11 @@
+uk:
+  active_admin:
+    filters:
+      predicates:
+        contains: 'містить'
+        equals: 'відповідає'
+        starts_with: 'починається з'
+        ends_with: 'закінчується на'
+      buttons:
+        clear: 'Скинути'
+        filter: 'Фільтрувати'

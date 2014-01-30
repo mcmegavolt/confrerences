@@ -1,2 +1,3 @@
-class ConferencesController < ApplicationController
+class ConferencesController < InheritedResources::Base
+	actions :show, :index
 end

@@ -1,11 +1,38 @@
 doctype html
 html
-	head
-	  title SciConferences
-	  link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600|Open+Sans+Condensed:300&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css"
-	  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-	  = javascript_include_tag "application", "data-turbolinks-track" => true
-	  = csrf_meta_tags
-	body
-
-		= yield
+  head
+    title SciConferences
+    link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600|Open+Sans+Condensed:300&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css"
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    #wrap
+      .container
+        .header
+          .row
+            .col-lg-3
+              .navbar-header
+                .navbar-brand.text-muted
+                  = link_to root_url, title: t(:'meta.site_title') do
+                    = image_tag 'logo.png', alt: t(:'meta.site_title')
+            .col-lg-9
+              .row.navigation
+                .col-lg-12
+                  ul.nav.navbar-nav.pull-right
+                    li class=('active' if I18n.locale == :uk)
+                      = link_to 'Українська', :locale => :uk
+                    li class=('active' if I18n.locale == :ru)
+                      = link_to 'Русский', :locale => :ru
+                    li class=('active' if I18n.locale == :en)
+                      = link_to 'English', :locale => :en
+              - unless controller_name == 'home'
+                .row
+                  .col-lg-12.title
+                    - if controller_name == 'conferences'
+                      p.dates= show_conference_dates resource
+                      h1= resource.title
+        = yield
+    #footer
+      .container
+        p.text-muted &copy; Company 2013

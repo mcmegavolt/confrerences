@@ -30,6 +30,7 @@ ActiveAdmin.register Conference do
   end
 
   form do |f|
+    f.semantic_errors *f.object.errors.keys
     f.inputs "Conference" do
       f.input :title
       f.input :description

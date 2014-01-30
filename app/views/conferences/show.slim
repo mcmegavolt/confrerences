@@ -1,0 +1,22 @@
+#conference
+	#show
+		.well
+			
+			p= resource.picture_url
+			
+			= resource.description.html_safe
+			
+			p
+				= link_to resource.file_url do
+					i.fa.fa-2x.fa-download
+					'&nbsp;
+					= t(:'most_common.donwload_conf_book')
+
+		.row.categories
+			- resource.categories.distinct.each do |cat|
+				.col-lg-3
+					= link_to conference_category_path(resource,cat)
+						.well
+							h3.title
+								= cat.title
+							.count= cat.articles.count
