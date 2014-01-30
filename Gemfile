@@ -15,7 +15,7 @@ gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
-gem 'unicorn'
+# gem 'unicorn'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -52,6 +52,7 @@ group :development do
   gem 'faker'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano-nginx-unicorn', require: false
 end
 
 group :production do
