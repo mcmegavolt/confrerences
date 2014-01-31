@@ -20,9 +20,9 @@ ActiveAdmin.register Conference do
       row :description
       row :start_at
       row :end_at
-      # row :picture do
-      #   image_tag conference.picture_url(:small)
-      # end
+      row :picture do
+        image_tag conference.picture_url(:thumb)
+      end
       row :file do
         link_to 'Download', conference.file_url
       end

@@ -32,6 +32,9 @@ html
                     - if controller_name == 'conferences'
                       p.dates= show_conference_dates resource
                       h1= resource.title
+                    - if controller_name == 'categories'
+                      p.dates= show_conference_dates parent
+                      h1= parent.title
         = yield
     #footer
       .container

@@ -10,4 +10,6 @@ en:
       best_wishes: "We wish you fruitful work!"
       signature: "Organizing Committee"
       donwload_conf_book: "Download in pdf format collection"
-      no_donwload: "Now we are working to create PDF version of the conference collection. You will be able to download it soon"
+      no_donwload_html: "Now we are working to create PDF version of the conference collection.<br/>You will be able to download it soon"
+    article:
+      download_article: "Download article"

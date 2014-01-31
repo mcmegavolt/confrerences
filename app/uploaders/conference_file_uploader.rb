@@ -15,7 +15,8 @@ class ConferenceFileUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-     "#{model.author}.#{file.extension}" if original_filename.present?
+    date = model.start_at.day.to_s + '-' + model.end_at.day.to_s + '.' + model.start_at.month.to_s + '.' + model.start_at.year.to_s
+     "conference_#{date}.#{file.extension}" if original_filename.present?
   end
 
 end
