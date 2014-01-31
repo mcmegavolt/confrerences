@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class FileUploader < CarrierWave::Uploader::Base
+class ConferenceFileUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
 
@@ -12,6 +12,10 @@ class FileUploader < CarrierWave::Uploader::Base
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
+  def filename
+     "#{model.author}.#{file.extension}" if original_filename.present?
   end
 
 end

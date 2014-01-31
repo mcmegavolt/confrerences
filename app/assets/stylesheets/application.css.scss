@@ -45,7 +45,13 @@ body, html {
 
 #conference {
   #show {
+    .header {
+      .file {
+        margin-top: 20px;
+      }
+    }
     .categories {
+      margin-top: 20px;
       a {
         overflow: hidden;
         h3.title {

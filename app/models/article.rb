@@ -5,5 +5,5 @@ class Article < ActiveRecord::Base
 
 	validates_presence_of :title, :entry, :author, :category_id, :conference_id
 
-	mount_uploader :file, FileUploader
+	mount_uploader :file, ArticleFileUploader
 end

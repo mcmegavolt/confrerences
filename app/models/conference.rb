@@ -7,7 +7,7 @@ class Conference < ActiveRecord::Base
 
 	validates_presence_of :title, :description, :start_at, :end_at
 
-	mount_uploader :file, FileUploader
+	mount_uploader :file, ConferenceFileUploader
 	mount_uploader :picture, PictureUploader
 
 end

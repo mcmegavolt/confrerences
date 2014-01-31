@@ -4,7 +4,14 @@ uk:
   most_common:
     move_forward: 'Вперед!'
     click_to_select: 'Натисніть для вибору'
-    donwload_conf_book: "Завантажити збірник"
+  static:
+    conference:
+      conference_title_html: "&laquo;Проблеми та перспективи розвитку науки на початку третього тисячоліття у країнах СНД&raquo;"
+      location: "Переяслав-Хмельницький, Україна"
+      best_wishes: "Бажаємо Вам плідної роботи!"
+      signature: "Оргкомітет"
+      donwload_conf_book: "Завантажити збірник"
+      no_donwload: "Наразі ми працюємо над формуванням електронної версі збірника матеріалів конференції в форматі pdf. Згодом Ви матимете можливість його завантажити."
 
   activerecord:
     models:
