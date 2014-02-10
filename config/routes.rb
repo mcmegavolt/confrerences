@@ -9,9 +9,8 @@ SciConferences::Application.routes.draw do
   root 'home#index'
 
   resources :conferences, path: 'conf' do
-    resources :categories, path: 'cat' do
-    	resources :articles, path: 'art'
-    end
+    resources :categories, path: 'cat'
   end
+  resources :articles, path: 'art'
 
 end

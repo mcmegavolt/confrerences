@@ -1,37 +1,35 @@
-#category
-  #show
-    .container
-      .row
-        .col-lg-3
-          ul.nav.nav-pills.nav-stacked
-            - parent.categories.distinct.each do |cat|
-              li class=('active' if resource == cat)
-                = link_to conference_category_path(parent,cat) do
-                  span.badge.pull-right= cat.articles.count
-                  = cat.title
-        .col-lg-9
-          ul.timeline
-            - resource.articles.each do |article|
-              li
-                .timeline-badge class=['warning', 'danger', 'info', 'success'].sample
-                  = link_to article.file_url do
-                    i.fa.fa-file-o
-                .timeline-panel
-                  .timeline-heading
-                    h3.timeline-title= article.title
-                    p
-                      .text-muted
-                        i.fa.fa-user
-                        '&nbsp;
-                        = article.author
-                        '&nbsp;|&nbsp;
-                        = link_to article.file_url do
-                          i.fa.fa-download
-                          '&nbsp;
-                          = t(:'static.article.download_article')
-                  .timeline-body
-                    p= article.entry
-            
-         
-         
-  
+#category.show
+  .row
+    .col-lg-3
+      ul.nav.nav-pills.nav-stacked
+        - parent.categories.distinct.each do |cat|
+          li class=('active' if resource == cat)
+            = link_to conference_category_path(parent,cat) do
+              span.badge.pull-right= cat.articles.count
+              = cat.title
+    .col-lg-9
+      ul.timeline
+        - resource.articles.each do |article|
+          li
+            .timeline-badge class=['warning', 'danger', 'info', 'success'].sample
+              = link_to article.file_url do
+                i.fa.fa-file-o
+            .timeline-panel
+              .timeline-heading
+                h3.timeline-title
+                  = link_to article.title, article_path(article)
+                p
+                  .text-muted
+                    i.fa.fa-user
+                    '&nbsp;
+                    = article.author
+                    '&nbsp;|&nbsp;
+                    = link_to article.file_url do
+                      i.fa.fa-download
+                      '&nbsp;
+                      = t(:'static.article.download_article')
+              .timeline-body
+                p= article.entry
+        
+     
+     

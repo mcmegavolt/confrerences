@@ -12,7 +12,6 @@ html
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-47699763-1', 'neasmo.org.ua');
       ga('send', 'pageview');
     #wrap
@@ -23,7 +22,7 @@ html
               .navbar-header
                 .navbar-brand.text-muted
                   = link_to root_url, title: t(:'meta.site_title') do
-                    = image_tag 'logo.png', alt: t(:'meta.site_title')
+                    = image_tag "logo-#{I18n.locale.to_s}.png", alt: t(:'meta.site_title')
             .col-lg-9
               .row.navigation
                 .col-lg-12
@@ -43,7 +42,12 @@ html
                     - if controller_name == 'categories'
                       p.dates= show_conference_dates parent
                       h1= parent.title
-        = yield
+                    - if controller_name == 'articles'
+                      p.dates= show_conference_dates resource.conference
+                      h1= link_to resource.conference.title, conference_path(resource.conference)
+
+        .container
+          = yield
     #footer
       .container
         p.text-muted

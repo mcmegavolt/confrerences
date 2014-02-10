@@ -11,6 +11,12 @@ body, html {
   height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 #wrap {
   min-height: 100%;
   height: auto;
@@ -27,6 +33,7 @@ body, html {
   }
 }
 .header {
+  margin-bottom: 20px;
   .navigation {
     height: 70px;
   }
@@ -44,10 +51,13 @@ body, html {
 }
 
 #conference {
-  #show {
+  &.show {
     .header {
       .file {
-        margin-top: 20px;
+        // margin-top: 20px;
+      }
+      h2 {
+        margin-top: 0px;
       }
     }
     .categories {
@@ -91,12 +101,22 @@ body, html {
 
 
 #category {
-  #show {
-    padding-top: 20px;
+  &.show {
     ul.nav.nav-pills.nav-stacked {
       margin-top: 20px;
     }
+  }
+}
 
+#article {
+  &.show {
+    .body {
+      h2 {
+      }
+    }
+    .comments {
+      padding: 20px 0;
+    }
   }
 }
 

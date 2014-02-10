@@ -1,40 +1,38 @@
-#conference
-	#show
-		.container
-			.row.header
-				.col-lg-3
-					.file
-						- unless resource.file_url.blank?
-							p.text-right
-								= link_to resource.file_url
-									i.fa.fa-file.fa-4x
-							p.text-right
-								= link_to resource.file_url	
-									i.fa.fa-download
-									'&nbsp;
-									= t(:'static.conference.donwload_conf_book')
-						- else
-							p.text-right
-								= t(:'static.conference.no_donwload_html')
+#conference.show
+	.row.header
+		.col-lg-3
+			.file
+				- unless resource.file_url.blank?
+					p.text-right
+						= link_to resource.file_url
+							i.fa.fa-file.fa-4x
+					p.text-right
+						= link_to resource.file_url	
+							i.fa.fa-download
+							'&nbsp;
+							= t(:'static.conference.donwload_conf_book')
+				- else
+					p.text-right
+						= t(:'static.conference.no_donwload_html')
 
-				.col-lg-9
-					.info
-						h2= t(:'static.conference.conference_title_html')
-						= resource.description.html_safe unless resource.description.blank?
-						p
-							b= t(:'static.conference.best_wishes')
-							'
-							i
-								= t(:'static.conference.location')
-								'.
-								= t(:'static.conference.signature')
+		.col-lg-9
+			.info
+				h2= t(:'static.conference.conference_title_html')
+				= resource.description.html_safe unless resource.description.blank?
+				p
+					b= t(:'static.conference.best_wishes')
+					'
+					i
+						= t(:'static.conference.signature')
+						',
+						= t(:'static.conference.location')
 
 
-			.row.categories
-				- resource.categories.distinct.each do |cat|
-					.col-lg-3
-						= link_to conference_category_path(resource,cat)
-							.well
-								h3.title
-									= cat.title
-								.count= cat.articles.count
+	.row.categories
+		- resource.categories.distinct.each do |cat|
+			.col-xs-4.col-sm-4.col-md-3
+				= link_to conference_category_path(resource,cat)
+					.well
+						h3.title
+							= cat.title
+						.count.hidden-xs.hidden-sm= cat.articles.count

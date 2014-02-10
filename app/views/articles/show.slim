@@ -1,0 +1,29 @@
+#article.show
+  .row
+    .col-lg-3
+    .col-lg-9
+      .body
+        h2= resource.title
+        p.text-muted
+          i.fa.fa-user
+          '&nbsp;
+          = resource.author
+          '&nbsp;|&nbsp;
+          = link_to resource.file_url do
+            i.fa.fa-download
+            '&nbsp;
+            = t(:'static.article.download_article')
+        .entry
+          p= resource.entry
+      hr/
+      .comments
+        #disqus_thread
+        javascript:
+          var disqus_shortname = 'sci-conf';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        noscript
+          'Please enable JavaScript to view the comments
