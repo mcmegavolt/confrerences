@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
 	def last_conference
-		Conference.last
+		Conference.first
 	end
 	helper_method :last_conference
 

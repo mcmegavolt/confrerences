@@ -1,0 +1,12 @@
+#advertising.show
+  .row
+    .col-lg-12
+      ul.nav.nav-tabs
+        li.active
+          = link_to resource.title, conference_advertising_path(resource.conference, resource)
+        - resource.conference.advertisings.each do |adv|
+          - unless adv == resource
+            li= link_to adv.title, conference_advertising_path(adv.conference, adv)
+      .body
+        h2= resource.title
+        = resource.body.html_safe

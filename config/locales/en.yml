@@ -4,6 +4,8 @@ en:
   most_common:
     move_forward: "Move forward!"
   static:
+    home:
+      oldconf_html: "<strong>Note!</strong> Conferences of previous years 2009 &ndash; 2013 available at:&nbsp;"
     conference:
       conference_title_html: "Development problems and prospects of science in the beginning of the third millennium in the CIS"
       location: "Pereyaslav-Khmelnitsky, Ukraine"

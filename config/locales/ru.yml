@@ -5,6 +5,8 @@ ru:
     move_forward: "Вперед!"
     donwload_conf_book: "Скачать сборник"
   static:
+    home:
+      oldconf_html: "<strong>Обратите внимание!</strong>  Предыдущие конференции 2009 &ndash; 2013 годов доступны по адресу:&nbsp;"
     conference:
       conference_title_html: "&laquo;Проблемы и перспективы развития науки в начале третьего тысячелетия в странах СНГ&raquo;"
       location: "Переяслав-Хмельницкий, Украина"
@@ -15,3 +17,41 @@ ru:
       show_conference: ""
     article:
       download_article: "Скачать статью"
+
+  activerecord: 
+    models:
+      conference: 'Конференции'
+      article: 'Статьи'
+      category: 'Категории'
+      advertising: 'Реклама'
+      admin_user: 'Администраторы'
+    attributes:
+      advertising:
+        title: "Заголовок"
+        body: "Содержание"
+        audience: "Целевая аудитория"
+        conference: "Конференция"
+      conference:
+        title: 'Название'
+        description: 'Описание'
+        file: 'Файл'
+        picture: 'Изображение'
+        start_at: 'Начало'
+        end_at: 'Конец'
+      article:
+        title: 'Название'
+        entry: 'Вступление'
+        file: 'Файл'
+        author: 'Автор'
+        category: 'Категория'
+        conference: 'Конференция'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+      category:
+        title: 'Название'
+        icon: 'Значок'
+        picture: 'Изображение'
+      admin_user:
+        current_sign_in_at: 'На сайте'
+        last_sign_in_at: 'Последний вход'
+        sign_in_count: 'Количество входов'      

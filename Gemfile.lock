@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: bae6cec4c38ac43deff4476b128796ecfad5741b
+  revision: c9e7774c0768dadac82681d2d233b89d012b8dc5
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -72,7 +72,7 @@ GEM
       activerecord (>= 3.0.0)
     arbre (1.0.1)
       activesupport (>= 3.0.0)
-    arel (4.0.1)
+    arel (4.0.2)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
     better_errors (1.1.0)
@@ -88,9 +88,9 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
-    capistrano-bundler (1.1.1)
+    capistrano-bundler (1.1.2)
       capistrano (~> 3.0)
-      sshkit (>= 1.2.0)
+      sshkit (~> 1.2)
     capistrano-nginx-unicorn (0.0.6)
       capistrano (>= 2.0)
     capistrano-rails (1.1.1)
@@ -103,12 +103,12 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
-    chosen-rails (1.0.2)
+    chosen-rails (1.1.0)
       coffee-rails (>= 3.2)
       compass-rails (>= 1.1.2)
       railties (>= 3.0)
       sass-rails (>= 3.2)
-    chunky_png (1.2.9)
+    chunky_png (1.3.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -141,6 +141,9 @@ GEM
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
     fssm (0.2.10)
+    globalize (4.0.0)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -171,7 +174,7 @@ GEM
     mysql2 (0.3.15)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.7.0)
+    net-ssh (2.8.0)
     orm_adapter (0.5.0)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
@@ -240,8 +243,8 @@ GEM
       term-ansicolor
     subexec (0.2.3)
     temple (0.6.7)
-    term-ansicolor (1.2.2)
-      tins (~> 0.8)
+    term-ansicolor (1.3.0)
+      tins (~> 1.0)
     thin (1.6.1)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -250,11 +253,11 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    tins (0.13.1)
+    tins (1.0.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.0)
+    turbolinks (2.2.1)
       coffee-rails
     tzinfo (0.3.38)
     uglifier (2.4.0)
@@ -282,6 +285,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   faker
   font-awesome-sass
+  globalize (~> 4.0.0)
   has_scope
   inherited_resources!
   jbuilder (~> 1.2)

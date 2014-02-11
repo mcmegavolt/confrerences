@@ -1,5 +1,9 @@
 ActiveAdmin.setup do |config|
 
+  # def set_admin_locale
+  #   I18n.locale = :uk
+  # end
+
   # == Site Title
   #
   # Set the title that is displayed on the main layout
@@ -10,7 +14,7 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+  config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
@@ -180,26 +184,20 @@ ActiveAdmin.setup do |config|
   # config.csv_options = { :force_quotes => true }
 
 
-  # == Menu System
-  #
-  # You can add a navigation menu to be used in your application, or configure a provided menu
-  #
-  # To change the default utility navigation to show a link to your website & a logout btn
-  #
-  #   config.namespace :admin do |admin|
-  #     admin.build_menu :utility_navigation do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
-  #       admin.add_logout_button_to_menu menu
-  #     end
-  #   end
-  #
-  # If you wanted to add a static menu item to the default menu provided:
-  #
-  #   config.namespace :admin do |admin|
-  #     admin.build_menu :default do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
-  #     end
-  #   end
+  config.namespace :admin do |admin|
+    admin.build_menu :utility_navigation do |menu|
+      menu.add :label => 'Language'.html_safe do |lang|
+        lang.add :label => "Українська",:url => proc {  url_for(:locale => 'uk') }, id: 'i18n-uk', :priority => 1
+        lang.add :label => "Русский",:url => proc {  url_for(:locale => 'ru') }, id: 'i18n-es', :priority => 2
+        lang.add :label => "English",:url => proc { url_for(:locale => 'en') }, id: 'i18n-en', :priority => 3
+      end
+      menu.add :label => proc{ display_name current_active_admin_user},
+                :url => '#',
+                :id => 'current_user',
+                :if => proc{ current_active_admin_user? }
+      admin.add_logout_button_to_menu menu
+    end
+  end
 
 
   # == Download Links

@@ -2,37 +2,45 @@
 	.row.header
 		.col-lg-3
 			.file
-				- unless resource.file_url.blank?
-					p.text-right
-						= link_to resource.file_url
-							i.fa.fa-file.fa-4x
-					p.text-right
-						= link_to resource.file_url	
-							i.fa.fa-download
-							'&nbsp;
-							= t(:'static.conference.donwload_conf_book')
-				- else
-					p.text-right
-						= t(:'static.conference.no_donwload_html')
+				- unless resource.has_not_yet_started?
+					- unless resource.file_url.blank?
+						p.text-right
+							= link_to resource.file_url
+								i.fa.fa-file.fa-4x
+						p.text-right
+							= link_to resource.file_url	
+								i.fa.fa-download
+								'&nbsp;
+								= t(:'static.conference.donwload_conf_book')
+					- else
+						p.text-right
+							= t(:'static.conference.no_donwload_html')
 
 		.col-lg-9
 			.info
 				h2= t(:'static.conference.conference_title_html')
 				= resource.description.html_safe unless resource.description.blank?
-				p
-					b= t(:'static.conference.best_wishes')
-					'
-					i
-						= t(:'static.conference.signature')
-						',
-						= t(:'static.conference.location')
+				- unless resource.has_not_yet_started?
+					p
+						b= t(:'static.conference.best_wishes')
+						'
+						i
+							= t(:'static.conference.signature')
+							',
+							= t(:'static.conference.location')
 
+			- if resource.has_not_yet_started? && resource.advertisings.exists?
+				.advertisings
+					- resource.advertisings.each_with_index do |adv, index|
+						- button_color = ['danger', 'success'][index]
+						p= link_to adv.title, conference_advertising_path(resource, adv), class: "btn btn-#{button_color} btn-lg"
 
-	.row.categories
-		- resource.categories.distinct.each do |cat|
-			.col-xs-4.col-sm-4.col-md-3
-				= link_to conference_category_path(resource,cat)
-					.well
-						h3.title
-							= cat.title
-						.count.hidden-xs.hidden-sm= cat.articles.count
+	- unless resource.has_not_yet_started?
+		.row.categories
+			- resource.categories.distinct.each do |cat|
+				.col-xs-4.col-sm-4.col-md-3
+					= link_to conference_category_path(resource,cat)
+						.well
+							h3.title
+								= cat.title
+							.count.hidden-xs.hidden-sm= cat.articles.count

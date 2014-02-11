@@ -17,11 +17,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
 #wrap {
   min-height: 100%;
   height: auto;
   margin: 0 auto -60px;
   padding: 0 0 60px;
+  >.container {
+    padding-bottom: 50px;
+  }
 }
 #footer {
   height: 60px;
@@ -50,6 +54,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#home {
+  
+}
+
+#advertising {
+  &.show {
+    .body {
+      margin-top: 20px;
+    }
+  }
+}
+
 #conference {
   &.show {
     .header {
@@ -58,6 +74,12 @@ h1, h2, h3, h4, h5, h6 {
       }
       h2 {
         margin-top: 0px;
+      }
+    }
+    .advertisings {
+      margin-top: 30px;
+      p {
+        margin-bottom: 20px;
       }
     }
     .categories {

@@ -1,6 +1,6 @@
 SciConferences::Application.routes.draw do
 
-  filter :locale, :exclude => %r(^admin/)
+  filter :locale#, :exclude => %r(^admin/)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
@@ -10,6 +10,7 @@ SciConferences::Application.routes.draw do
 
   resources :conferences, path: 'conf' do
     resources :categories, path: 'cat'
+    resources :advertisings, path: 'adv'
   end
   resources :articles, path: 'art'
 

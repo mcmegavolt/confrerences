@@ -5,6 +5,8 @@ uk:
     move_forward: 'Вперед!'
     click_to_select: 'Натисніть для вибору'
   static:
+    home:
+      oldconf_html: "<strong>Зверніть увагу!</strong> Попередні конференціі 2009 &ndash; 2013 років доступні за адресою:&nbsp;"
     conference:
       conference_title_html: "&laquo;Проблеми та перспективи розвитку науки на початку третього тисячоліття у країнах СНД&raquo;"
       location: "Переяслав-Хмельницький, Україна"
@@ -20,8 +22,14 @@ uk:
       conference: 'Конференції'
       article: 'Статті'
       category: 'Категорії'
+      advertising: 'Реклама'
       admin_user: 'Адміністратори'
     attributes:
+      advertising:
+        title: "Заголовок"
+        body: "Зміст"
+        audience: "Цільова аудиторія"
+        conference: "Конференція"    
       conference:
         title: 'Назва'
         description: 'Опис'
