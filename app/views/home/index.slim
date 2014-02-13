@@ -15,10 +15,11 @@
 
   .row.conferences
     - Conference.all.each do |conference|
-      .col-sm-6.col-md-4
+      .col-sm-6
         .thumbnail
           / <img data-src="holder.js/300x200" alt="...">
           .caption
+            p.text-muted.pull-right= conference.id
             h3= conference.title
             p= show_conference_dates conference
             p= link_to t(:'most_common.move_forward'), conference_path(conference), class: "btn btn-primary"
