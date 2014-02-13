@@ -25,7 +25,7 @@ ActiveAdmin.register Advertising do
   form do |f|
     f.semantic_errors *f.object.errors.keys
     f.inputs do
-      f.input :conference, :as => :select, :input_html => { :class => 'chosen-select', "data-placeholder" => 'Click' }, :selected => Conference.last.id
+      f.input :conference, :as => :select, :input_html => { :class => 'chosen-select', "data-placeholder" => 'Click' }, :selected => Conference.first.id
       f.input :title
       f.input :audience
       f.input :body
