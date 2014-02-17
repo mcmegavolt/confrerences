@@ -17,6 +17,8 @@ ru:
       show_conference: ""
     article:
       download_article: "Скачать статью"
+      comments: "Комментарии: "
+
 
   activerecord: 
     models:
