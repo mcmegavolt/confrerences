@@ -17,7 +17,7 @@ class Conference < ActiveRecord::Base
 	default_scope order('end_at DESC')
 
 	def has_not_yet_started?
-		Time.now < self.end_at
+		Time.now < self.start_at
 	end
 
 end
