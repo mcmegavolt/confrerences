@@ -33,7 +33,7 @@ ActiveAdmin.register Article do
   form do |f|
     f.semantic_errors *f.object.errors.keys
     f.inputs do
-      f.input :conference, :as => :select, :input_html => { :class => 'chosen-select', "data-placeholder" => 'Click' }, :selected => Conference.last.id
+      f.input :conference, :as => :select, :input_html => { :class => 'chosen-select', "data-placeholder" => 'Click' }, :selected => Conference.first.id
       f.input :category, :as => :select, :input_html => { :class => 'chosen-select', "data-placeholder" => t(:'most_common.click_to_select') }
       f.input :title
       f.input :author
