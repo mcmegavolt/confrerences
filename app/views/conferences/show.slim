@@ -43,4 +43,4 @@
 						.well
 							h3.title
 								= cat.title
-							.count.hidden-xs.hidden-sm= cat.articles.count
+							.count.hidden-xs.hidden-sm= cat.articles.where(conference:resource).count
