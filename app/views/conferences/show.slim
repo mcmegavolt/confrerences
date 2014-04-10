@@ -18,8 +18,9 @@
 
 		.col-lg-9
 			.info
-				h2= t(:'static.conference.conference_title_html')
-				= resource.description.html_safe unless resource.description.blank?
+				/ h2= t(:'static.conference.conference_title_html')
+				- unless resource.description.blank?
+					= resource.description.html_safe 
 				- unless resource.has_not_yet_started?
 					p
 						b= t(:'static.conference.best_wishes')
