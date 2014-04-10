@@ -8,7 +8,9 @@
       i.fa.fa-external-link-square
   .jumbotron.shadow-effect
     h1= last_conference.title
-    h2= t(:'static.conference.conference_title_html')
+    - unless last_conference.description.blank?
+      = last_conference.description.html_safe 
+    / h2= t(:'static.conference.conference_title_html')
     p.lead
       = show_conference_dates last_conference
     p= link_to t(:'most_common.move_forward'), conference_path(last_conference), class: "btn btn-lg btn-success"
@@ -22,3 +24,4 @@
             h3= conference.title
             p= show_conference_dates conference
             p= link_to t(:'most_common.move_forward'), conference_path(conference), class: "btn btn-primary"
+        br
