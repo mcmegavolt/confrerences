@@ -1,3 +1,7 @@
+- page_title = resource.title + ' – ' + resource.start_at.day.to_s + '-' + resource.end_at.day.to_s + ' ' + l(resource.end_at, :format => "%B %Y")
+- title page_title
+- description resource.description
+
 #conference.show
 	.row.header
 		.col-lg-3
@@ -41,7 +45,7 @@
 			- resource.categories.distinct.each do |cat|
 				.col-xs-4.col-sm-4.col-md-3
 					= link_to conference_category_path(resource,cat)
-						.well
+						.well.cat-block
 							h3.title
 								= cat.title
 							.count.hidden-xs.hidden-sm= cat.articles.where(conference:resource).count

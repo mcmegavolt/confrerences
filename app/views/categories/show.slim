@@ -1,3 +1,7 @@
+- page_title = resource.title + ' | ' + parent.title + ' – ' + parent.start_at.day.to_s + '-' + parent.end_at.day.to_s + ' ' + l(parent.end_at, :format => "%B %Y")
+- title page_title
+- description parent.description
+
 #category.show
   .row
     .col-lg-3

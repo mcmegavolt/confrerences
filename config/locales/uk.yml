@@ -1,9 +1,9 @@
 uk:
   meta:
-    site_title: 'Наукові Конференції'
+    site_title_html: "Наукові Конференції"
   most_common:
-    move_forward: 'Вперед!'
-    click_to_select: 'Натисніть для вибору'
+    move_forward: "Вперед!"
+    click_to_select: "Натисніть для вибору"
   static:
     home:
       oldconf_html: "<strong>Зверніть увагу!</strong> Попередні конференціі 2009 &ndash; 2013 років доступні за адресою:&nbsp;"
@@ -19,11 +19,11 @@ uk:
       comments: "Коментарі: "
   activerecord:
     models:
-      conference: 'Конференції'
-      article: 'Статті'
-      category: 'Категорії'
-      advertising: 'Реклама'
-      admin_user: 'Адміністратори'
+      conference: "Конференції"
+      article: "Статті"
+      category: "Категорії"
+      advertising: "Реклама"
+      admin_user: "Адміністратори"
     attributes:
       advertising:
         title: "Заголовок"
@@ -31,26 +31,26 @@ uk:
         audience: "Цільова аудиторія"
         conference: "Конференція"    
       conference:
-        title: 'Назва'
-        description: 'Опис'
-        file: 'Файл'
-        picture: 'Зображення'
-        start_at: 'Початок'
-        end_at: 'Кінець'
+        title: "Назва"
+        description: "Опис"
+        file: "Файл"
+        picture: "Зображення"
+        start_at: "Початок"
+        end_at: "Кінець"
       article:
-        title: 'Назва'
-        entry: 'Вступ'
-        file: 'Файл'
-        author: 'Автор'
-        category: 'Категорія'
-        conference: 'Конференція'
-        created_at: 'Створено'
-        updated_at: 'Оновлено'
+        title: "Назва"
+        entry: "Вступ"
+        file: "Файл"
+        author: "Автор"
+        category: "Категорія"
+        conference: "Конференція"
+        created_at: "Створено"
+        updated_at: "Оновлено"
       category:
-        title: 'Назва'
-        icon: 'Значок'
-        picture: 'Зображення'
+        title: "Назва"
+        icon: "Значок"
+        picture: "Зображення"
       admin_user:
-        current_sign_in_at: 'На сайті'
-        last_sign_in_at: 'Останній вхід'
-        sign_in_count: 'Кількість входів'
+        current_sign_in_at: "На сайті"
+        last_sign_in_at: "Останній вхід"
+        sign_in_count: "Кількість входів"

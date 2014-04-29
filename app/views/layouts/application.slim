@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title SciConferences
+    = display_meta_tags :site => t(:'meta.site_title_html'), :reverse => true
     link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600|Open+Sans+Condensed:300&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css"
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
@@ -21,8 +21,8 @@ html
             .col-lg-3
               .navbar-header
                 .navbar-brand.text-muted
-                  = link_to root_url, title: t(:'meta.site_title') do
-                    = image_tag "logo-#{I18n.locale.to_s}.png", alt: t(:'meta.site_title')
+                  = link_to root_url, title: t(:'meta.site_title_html') do
+                    = image_tag "logo-#{I18n.locale.to_s}.png", alt: t(:'meta.site_title_html')
             .col-lg-9
               .row.navigation
                 .col-lg-12
@@ -52,7 +52,7 @@ html
         p.text-muted
         '&copy;
         '2013 &ndash;
-        = link_to 'Aleksandr Ponomarenko', 'http://alexponomarenko.com/', target: '_blank'
+        = link_to 'Oleksandr Ponomarenko', 'http://alexponomarenko.com/', target: '_blank'
 
     /! Yandex.Metrika counter
     javascript:
