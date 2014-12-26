@@ -3,6 +3,7 @@ en:
     site_title_html: "Sci Conferences"
   most_common:
     move_forward: "Move forward!"
+    take_a_look: "Enter"
   static:
     home:
       oldconf_html: "<strong>Note!</strong> Conferences of previous years 2009 &ndash; 2013 available at:&nbsp;"
@@ -16,3 +17,11 @@ en:
     article:
       download_article: "Download article"
       comments: "Comments: "
+  contacts:
+    phones_title: "Contacts:"
+    phone_numbers_html: "&nbsp;&nbsp; +380 (97) 923 16 58, +380 (93) 335 78 86"
+    send_email: "Send email"
+    org_title: "Organizing Committee:"
+    address_html: "08401, Украина, Киевская обл, г. Переяслав-Хмельницкий<br> ул. Сухомлинского, 32, к. 108."
+    copyright: "Developed by"
+    developer: "Oleksandr Ponomarenko"

@@ -52,10 +52,29 @@ html
           = yield
     #footer
       .container
-        p.text-muted
-        '&copy;
-        '2013 &ndash;
-        = link_to 'Oleksandr Ponomarenko', 'http://alexponomarenko.com/', target: '_blank'
+        .col-xs-4
+          p.text-muted
+            b= t(:'contacts.phones_title')
+            br
+            i.fa.fa-phone
+            = t(:'contacts.phone_numbers_html')
+            br
+            i.fa.fa-envelope
+            ' &nbsp;
+            = link_to t(:'contacts.send_email'), 'mailto:neasmo@gmail.com'
+        .col-xs-5
+          p.text-muted
+            b= t(:'contacts.org_title')
+            br
+            = t(:'contacts.address_html')
+        .col-xs-3
+          p.text-muted.text-right
+            = t(:'contacts.copyright')
+            br
+            = link_to t(:'contacts.developer'), 'http://alexponomarenko.com/', target: '_blank'
+            br
+            ' 2009 &ndash;
+            = Time.now.year
 
     /! Yandex.Metrika counter
     javascript:

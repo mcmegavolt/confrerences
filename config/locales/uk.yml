@@ -3,6 +3,7 @@ uk:
     site_title_html: "Наукові Конференції"
   most_common:
     move_forward: "Вперед!"
+    take_a_look: "Переглянути"
     click_to_select: "Натисніть для вибору"
   static:
     home:
@@ -17,6 +18,14 @@ uk:
     article:
       download_article: "Завантажити статтю"
       comments: "Коментарі: "
+  contacts:
+    phones_title: "Контактні телефони:"
+    phone_numbers_html: "&nbsp;&nbsp; +380 (97) 923 16 58, +380 (93) 335 78 86"
+    send_email: "Написати листа"
+    org_title: "Адреса оргкомітету:"
+    address_html: "08401, Київська обл. м. Переяслав-Хмельницький<br>вул. Сухомлинського, 32, гурт. 1, кім. 108."
+    copyright: "Розробка та підтримка"
+    developer: "Олександр Пономаренко"
   activerecord:
     models:
       conference: "Конференції"
@@ -29,7 +38,7 @@ uk:
         title: "Заголовок"
         body: "Зміст"
         audience: "Цільова аудиторія"
-        conference: "Конференція"    
+        conference: "Конференція"
       conference:
         title: "Назва"
         description: "Опис"
