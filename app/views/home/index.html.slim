@@ -24,10 +24,9 @@
             th= t(:'static.home.previous_conferences')
         tbody
           - Conference.where.not(id: last_conference.id).each do |conference|
-            - 10.times
-              tr
-                td
-                  i.fa.fa-bookmark-o
-                  '&nbsp; &nbsp;
-                  = link_to conference_path(conference), title: conference.title
-                    = show_conference_dates conference
+            tr
+              td
+                i.fa.fa-bookmark-o
+                '&nbsp; &nbsp;
+                = link_to conference_path(conference), title: conference.title
+                  = show_conference_dates conference
