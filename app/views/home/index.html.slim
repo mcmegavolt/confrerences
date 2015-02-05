@@ -18,15 +18,25 @@
 
   .row.conferences
     .col-sm-4
-      table.table.table-striped.table-condensed
+      h3= t(:'static.home.previous_conferences')
+      table.table.table-striped.table-hover
         thead
           tr
-            th= t(:'static.home.previous_conferences')
+            th
+            th
+            th
+            th
+            th
         tbody
           - Conference.where.not(id: last_conference.id).each do |conference|
             tr
               td
                 i.fa.fa-bookmark-o
-                '&nbsp; &nbsp;
+              td #{conference.start_at.day.to_s} &ndash; #{conference.end_at.day.to_s}
+              td= l(conference.end_at, format: "%B")
+              td= conference.end_at.year.to_s
+              td
                 = link_to conference_path(conference), title: conference.title
-                  = show_conference_dates conference
+                  = t(:'most_common.take_a_look')
+                  '&nbsp;
+                  i.fa.fa-chevron-circle-right
