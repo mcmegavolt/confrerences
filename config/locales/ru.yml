@@ -8,6 +8,7 @@ ru:
   static:
     home:
       oldconf_html: "<strong>Обратите внимание!</strong>  Предыдущие конференции 2009 &ndash; 2013 годов доступны по адресу:&nbsp;"
+      previous_conferences: "Предыдущие конференции"
     conference:
       conference_title_html: "&laquo;Проблемы и перспективы развития науки в начале третьего тысячелетия в странах СНГ&raquo;"
       location: "Переяслав-Хмельницкий, Украина"

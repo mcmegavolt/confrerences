@@ -7,7 +7,8 @@ uk:
     click_to_select: "Натисніть для вибору"
   static:
     home:
-      oldconf_html: "<strong>Зверніть увагу!</strong> Попередні конференціі 2009 &ndash; 2013 років доступні за адресою:&nbsp;"
+      oldconf_html: "<strong>Зверніть увагу!</strong> Попередні конференції 2009 &ndash; 2013 років доступні за адресою:&nbsp;"
+      previous_conferences: "Попередні конференції"
     conference:
       conference_title_html: "&laquo;Проблеми та перспективи розвитку науки на початку третього тисячоліття у країнах СНД&raquo;"
       location: "Переяслав-Хмельницький, Україна"

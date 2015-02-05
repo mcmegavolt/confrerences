@@ -1,0 +1,33 @@
+#home
+  .alert.alert-success.alert-dismissable
+    button.close type="button" data-dismiss="alert" aria-hidden="true"
+      i.fa.fa-times
+    = t(:'static.home.oldconf_html')
+    = link_to 'http://oldconf.neasmo.org.ua/', target: '_blank', class: 'alert-link', rel: 'nofollow'
+      'http://oldconf.neasmo.org.ua
+      i.fa.fa-external-link-square
+  .jumbotron.shadow-effect
+    h1= last_conference.title
+    - unless last_conference.description.blank?
+      = last_conference.description.html_safe
+    / h2= t(:'static.conference.conference_title_html')
+    p.lead
+      = show_conference_dates last_conference
+    p= link_to t(:'most_common.take_a_look'), conference_path(last_conference), class: "btn btn-lg btn-success"
+    / = image_tag 'santa.png', id: 'santa-claus'
+
+  .row.conferences
+    .col-sm-4
+      table.table.table-striped.table-condensed
+        thead
+          tr
+            th= t(:'static.home.previous_conferences')
+        tbody
+          - Conference.where.not(id: last_conference.id).each do |conference|
+            - 10.times
+              tr
+                td
+                  i.fa.fa-bookmark-o
+                  '&nbsp; &nbsp;
+                  = link_to conference_path(conference), title: conference.title
+                    = show_conference_dates conference
