@@ -12,7 +12,6 @@ gem 'capistrano-rails'
 gem 'capistrano-rvm'
 
 gem 'sqlite3'
-gem 'mysql2'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -58,6 +57,7 @@ group :development do
 end
 
 group :production do
+  gem 'mysql2'
 end
 
 group :doc do
