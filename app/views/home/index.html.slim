@@ -32,7 +32,10 @@
             tr
               td
                 i.fa.fa-bookmark-o
-              td #{conference.start_at.day.to_s} &ndash; #{conference.end_at.day.to_s}
+              - if conference.one_day?
+                td #{conference.start_at.day.to_s}
+              - else
+                td #{conference.start_at.day.to_s} &ndash; #{conference.end_at.day.to_s}
               td= l(conference.end_at, format: "%B")
               td= conference.end_at.year.to_s
               td

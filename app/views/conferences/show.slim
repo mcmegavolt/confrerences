@@ -6,7 +6,7 @@
 	.row.header
 		.col-lg-3
 			.file
-				- unless resource.has_not_yet_started?
+				- unless resource.not_yet_started?
 					- unless resource.file_url.blank?
 						p.text-right
 							= link_to resource.file_url
@@ -25,7 +25,7 @@
 				/ h2= t(:'static.conference.conference_title_html')
 				- unless resource.description.blank?
 					= resource.description.html_safe 
-				- unless resource.has_not_yet_started?
+				- unless resource.not_yet_started?
 					p
 						b= t(:'static.conference.best_wishes')
 						'
@@ -34,13 +34,13 @@
 							',
 							= t(:'static.conference.location')
 
-			- if resource.has_not_yet_started? && resource.advertisings.exists?
+			- if resource.not_yet_started? && resource.advertisings.exists?
 				.advertisings
 					- resource.advertisings.each_with_index do |adv, index|
 						- button_color = ['danger', 'success'][index]
 						p= link_to adv.title, conference_advertising_path(resource, adv), class: "btn btn-#{button_color} btn-lg"
 
-	- unless resource.has_not_yet_started?
+	- unless resource.not_yet_started?
 		.row.categories
 			- resource.categories.distinct.each do |cat|
 				.col-xs-4.col-sm-4.col-md-3
