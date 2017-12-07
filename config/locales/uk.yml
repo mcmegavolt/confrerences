@@ -21,11 +21,11 @@ uk:
       comments: "Коментарі: "
   contacts:
     phones_title: "Контактні телефони:"
-    phone_numbers_html: "&nbsp;&nbsp; +380 (97) 923 16 58, +380 (93) 335 78 86"
+    phone_numbers_html: "&nbsp;&nbsp; +380 (97) 923 16 58"
     send_email: "Написати листа"
     org_title: "Адреса оргкомітету:"
     address_html: "08401, Київська обл. м. Переяслав-Хмельницький<br>вул. Сухомлинського, 32, гурт. 1, кім. 108."
-    copyright: "Розробка та підтримка"
+    copyright: "Розробка"
     developer: "Олександр Пономаренко"
   activerecord:
     models:
